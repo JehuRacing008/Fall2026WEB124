@@ -1,4 +1,5 @@
-// Create a comment with your name and date of the project here
+// Noah Monnington
+// Date: 9/16/26
 
 "use strict";
 
