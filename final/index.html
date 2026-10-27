@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- DOCUMENT SETTINGS:
+         Character encoding, responsive layout, and browser tab title. -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TODO: Change this to your website's title. -->
+    <title>IVolley</title>
+
+    <!-- EXTERNAL CSS:
+         W3.CSS provides ready-made styling classes.
+         Google Fonts provides the Inconsolata font.
+         You can change the font or remove either link if desired. -->
+
+    <link rel="stylesheet"
+          href="https://www.w3schools.com/w3css/6/w3.css">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+    <!-- INTERNAL CSS:
+         Basic styling for the page and the hero image area.
+         Customize these styles as you develop the website. -->
+         <link rel="stylesheet"  href="styles.css">
+
+
+    <style>
+        body, html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+
+        .bgimg {
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+            url("volley.jpg");
+            min-height: 100%;
+        }
+
+        /* POSITION CARDS:
+           TODO: Add your own card styling here if needed. */
+
+        /* Keep this class only if you use it to hide and reveal content. */
+        .hidden-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+         The links jump to sections using their IDs.
+         Keep each href matched to its section's id.
+         ========================================== -->
+
+    <div class="w3-top">
+        <nav class="w3-flex w3-padding w3-black">
+
+            <!-- Link to the homepage/header. -->
+            <a href="#home"
+               class="w3-button w3-black"
+               style="flex: 1">
+                HOME
+            </a>
+
+            <!-- TODO: Rename this link if you change the section ID. -->
+            <a href="#basics"
+               class="w3-button w3-black"
+               style="flex: 1">
+                BASICS
+            </a>
+
+            <!-- Link to the interactive volleyball position cards. -->
+            <a href="#positions"
+               class="w3-button w3-black"
+               style="flex: 1">
+                POSITIONS
+            </a>
+
+            <!-- Link to your player profile form. -->
+            <a href="#profile"
+               class="w3-button w3-black"
+               style="flex: 1">
+                MY PROFILE
+            </a>
+
+        </nav>
+    </div>
+
+
+    <!-- ==========================================
+         HOMEPAGE / HERO HEADER
+         Contains the main title, tagline, and image.
+         ========================================== -->
+
+    <header class="bgimg w3-display-container w3-grayscale-min"
+            id="home">
+
+
+        <!-- MAIN TITLE:
+             TODO: Replace the placeholder with your website title.
+             Add a short tagline underneath if desired. -->
+
+        <div class="w3-display-middle w3-center">
+
+            <span class="w3-text-white" style="font-size: 80px">
+                <!-- TODO: Your main title -->
+                IVolley
+            </span>
+        </div>
+
+        <!-- OPTIONAL: Small text in the bottom-right corner.
+             TODO: Add a short welcome message or remove this block. -->
+
+        <div class="w3-display-bottomright
+                    w3-center w3-padding-large">
+
+            <span class="w3-text-white" style="font-size: 40px">
+                <!-- TODO: Welcome message -->
+                 <p>The perfect place to start your volleyball journey</p>
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN PAGE CONTENT
+         The sections below contain your actual content.
+         ========================================== -->
+
+    <div class="w3-sand w3-grayscale w3-large">
+
+        <main>
+
+
+            <!-- ======================================
+                 SECTION 1: VOLLEYBALL BASICS
+                 Explain the sport and its basic rules.
+                 ====================================== -->
+
+            <section class="w3-container" id="basics">
+
+                <div class="w3-content" style="max-width: 700px">
+
+                    <!-- SECTION HEADING -->
+                    <h2 class="w3-center w3-padding-64">
+                        <span class="w3-tag w3-wide">
+                            <!-- TODO: Section title -->
+                            VOLLEYBALL BASICS
+                        </span>
+                    </h2>
+                    <div id="rallyGallery">
+                        <img id="serve" src="serving.jpg" alt="Serve">
+                        <img id="recieve" src="recieve.jpg" alt="Recieve">
+                        <img id="set" src="setting.jpg" alt="Set">
+                        <img id="spike" src="spiking.jpg" alt="Spike">
+                    </div>
+
+                    <!-- TODO: Write an introductory paragraph about
+                         volleyball and the objective of the game. -->
+
+                    <p>
+                        <!-- Your introduction goes here. -->
+                    </p>
+
+                    <!-- TODO: Add another paragraph explaining
+                         a basic rule, scoring, or how rallies work. -->
+
+                    <p>
+                        <!-- More information goes here. -->
+                    </p>
+
+                    <!-- IMAGE:
+                         TODO: Replace the filename with your own image.
+                         Update the alt text to describe the actual image.
+                         Make sure the image is permitted for your use. -->
+
+                    <img src="volleyball.webp"
+                         alt="Description of the volleyball image"
+                         style="width: 100%; margin-top: 16px">
+
+                    <!-- OPTIONAL: A fact, quotation, or interesting detail.
+                         You can remove this block if you don't need it. -->
+
+                    <div class="w3-panel w3-leftbar w3-light-grey">
+
+                        <p>
+                            <!-- TODO: Add a volleyball fact or tip. -->
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="w3-container" id="positions">
+
+                <div class="w3-content" style="max-width: 1000px">
+
+                    <!-- SECTION HEADING -->
+                    <h2 class="w3-center w3-padding-64">
+                        <span class="w3-tag w3-wide">
+                            <!-- TODO: Section title -->
+                            PLAYER POSITIONS
+                        </span>
+                    </h2>
+
+                    <!-- INTRODUCTION:
+                         TODO: Explain what the visitor will learn here. -->
+
+                    <p>
+                        <!-- Short introduction to the positions. -->
+                    </p>
+
+                    <!-- POSITION CARD CONTAINER:
+                         JavaScript will select this element and insert
+                         cards generated from your array of objects.
+
+                         The ID is important. Keep it consistent with
+                         the selector you use in your JavaScript file. -->
+
+                        <h1 id="galleryHeading">Volleyball Positions</h1>
+
+                        <div class="galleryContainer">
+                            <img id="positionImage" src="" alt="Volleyball position image">
+
+                            <dl class="positionDetails">
+                            <dt>Name:</dt>
+                            <dd id="positionName"></dd>
+
+                            <dt>Details:</dt>
+                            <dd id="positionDetails"></dd>
+
+                            <dt>ID:</dt>
+                            <dd id="positionID"></dd>
+                            </dl>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="prev" type="button">Previous</button>
+                            <button id="next" type="button">Next</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ======================================
+                 SECTION 3: SKILLS AND TRAINING TIPS
+                 Add information about fundamental skills.
+                 ====================================== -->
+
+            <section class="w3-container" id="skills">
+
+                <div class="w3-content" style="max-width: 700px">
+
+                    <!-- SECTION HEADING -->
+                    <h2 class="w3-center w3-padding-64">
+                        <span class="w3-tag w3-wide">
+                            <!-- TODO: Section title -->
+                            SKILLS AND TRAINING
+                        </span>
+                    </h2>
+
+                    <!-- TODO: Describe a volleyball skill,
+                         such as serving, passing, setting, or hitting. -->
+
+                    <p>
+                        <!-- Your content goes here. -->
+                    </p>
+
+                    <!-- TODO: Add a list of useful tips.
+                         Each li element represents one list item. -->
+
+                    <ul>
+                        <li><!-- TODO: First tip --></li>
+                        <li><!-- TODO: Second tip --></li>
+                        <li><!-- TODO: Third tip --></li>
+                    </ul>
+
+                    <!-- INTERACTIVE TIP:
+                         TODO: Add a button that displays a training tip.
+                         JavaScript will handle the click event.
+                         The paragraph below can display the result. -->
+
+                    <button class="w3-button w3-black"
+                            id="tipButton"
+                            type="button">
+                        Show a Training Tip
+                    </button>
+
+                    <p id="tipDisplay">
+                        <!-- JavaScript can display a tip here. -->
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ======================================
+                 SECTION 4: PLAYER PROFILE FORM
+                 Collect information from the visitor.
+                 JavaScript will handle submission and storage.
+                 ====================================== -->
+
+            <section class="w3-container" id="profile">
+
+                <div class="w3-content"
+                     style="max-width: 700px; padding-bottom: 32px">
+
+                    <!-- SECTION HEADING -->
+                    <h2 class="w3-center w3-padding-64">
+                        <span class="w3-tag w3-wide">
+                            <!-- TODO: Section title -->
+                            YOUR VOLLEYBALL PROFILE
+                        </span>
+                    </h2>
+
+                    <!-- TODO: Explain what the form is for. -->
+
+                    <p>
+                        <!-- Form introduction goes here. -->
+                    </p>
+
+                    <!-- FORM:
+                         JavaScript will prevent the default page reload,
+                         retrieve the input values, display the result,
+                         and save selected information in localStorage. -->
+
+                    <form id="profileForm">
+
+                        <!-- INPUT 1:
+                             Visitor's name.
+                             The name attribute identifies the form field. -->
+
+                        <p>
+                            <label for="playerName">Your Name</label>
+
+                            <input class="w3-input w3-padding-16 w3-border"
+                                   type="text"
+                                   id="playerName"
+                                   name="playerName"
+                                   placeholder="Enter your name"
+                                   required>
+                        </p>
+
+                        <!-- INPUT 2:
+                             Visitor's favorite volleyball position. -->
+
+                        <p>
+                            <label for="favoritePosition">
+                                Favorite Position
+                            </label>
+
+                            <select class="w3-select w3-border"
+                                    id="favoritePosition"
+                                    name="favoritePosition"
+                                    required>
+
+                                <option value="" disabled selected>
+                                    Choose a position
+                                </option>
+
+                                <!-- TODO:
+                                     Add options that match your
+                                     volleyball position objects. -->
+
+                                <option value="Setter">Setter</option>
+                                <option value="Libero">Libero</option>
+                                <option value="Outside Hitter">
+                                    Outside Hitter
+                                </option>
+                                <option value="Middle Blocker">
+                                    Middle Blocker
+                                </option>
+
+                            </select>
+                        </p>
+
+                        <!-- SUBMIT BUTTON:
+                             JavaScript will listen for the form's submit
+                             event and prevent the page from reloading. -->
+
+                        <p>
+                            <button class="w3-button w3-black"
+                                    type="submit">
+                                SAVE PROFILE
+                            </button>
+                        </p>
+
+                    </form>
+
+                    <!-- SUBMITTED INFORMATION:
+                         JavaScript can display the visitor's
+                         submitted name and favorite position here. -->
+
+                    <div id="profileResult" class="w3-panel">
+
+                        <!-- Submission result goes here. -->
+
+                    </div>
+
+                    <!-- STORED INFORMATION:
+                         JavaScript can retrieve previously saved
+                         information from localStorage and display it here. -->
+
+                    <p id="savedProfile">
+                        <!-- Previously saved profile goes here. -->
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         FOOTER
+         Put image credits, sources, and closing text here.
+         ========================================== -->
+
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+
+        <!-- TODO: Add a short closing message. -->
+
+        <p>
+            <!-- Your closing message goes here. -->
+        </p>
+
+        <!-- SOURCES:
+             Credit images and any external information you use.
+             Replace these placeholders with actual attribution links. -->
+
+        <p>
+            Image and information sources:
+            <!-- TODO: Add source links here. -->
+        </p>
+
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         TODO: Link your external JavaScript file here.
+         Create the file in the correct project location.
+         The defer attribute waits until the HTML is parsed
+         before the script runs.
+         ========================================== -->
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
