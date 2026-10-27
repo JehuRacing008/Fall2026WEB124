@@ -1,34 +1,26 @@
+// Name: Noah Monnignton
+// Date: 10/27/26
 "use strict";
 
-
-//  Position CONSTRUCTOR FUNCTION
-
-//  Complete the constructor function to assign parameter values to instance properties using 'this'.
 function Position(name, job, id, image = "") {
-  this.name = name;
-  this.job = job;
-  this.id = id;
-  this.image = image;
+    this.name = name;
+    this.job = job;
+    this.id = id;
+    this.image = image;
 }
 
-// PROTOTYPE METHODS
-// Complete each prototype method according to its instructions.
 
 Position.prototype.getDescription = function () {
-  // Return a string formatted like: "Stanley is a cat and is 6 years old."
-  return (`${this.name}: ${this.job}`);
+    return (`${this.name}: ${this.job}`);
 
 };
 
 Position.prototype.getID = function () {
-  // Return the Position's id property
-  return this.id
+    return this.id
 };
 
 
-// OBJECT INSTANTIATION & CONSOLE LOGGING
 
-// Instantiate 2 Position objects using 'new Position(...)' with image filenames for the dog and parrot
 const position1 = new Position("Outside Hitter", "Serve recieve and primary hitter", "position1", "OH.jpg");
 const position2 = new Position("Middle Blocker", "Blocking", "position2", "middle.jpg");
 const position3 = new Position("Opposite Hitter", "Decoy", "position3", "oppo.jpeg");
@@ -39,23 +31,16 @@ const position6 = new Position("Libero", "Defense", "position6", "libero.jpg");
 
 const Positions = [position1, position2, position3, position4, position5, position6];
 
-//  Use Array.prototype.forEach() to log each Position's details to the browser console.
-// Log Name, Type, Age, Owner Name, Owner Phone, and ID.
 Positions.forEach(function (Position) {
-  // Write your console.log statements here:
-  console.log(Position.name)
-  console.log(Position.getID())
+    console.log(Position.name)
+    console.log(Position.getDescription())
 });
 
-// DOM SELECTION
 
 let currentIndex = 0;
 
 
-// Select the DOM elements using document.querySelector().
-// Double check that element IDs match your HTML file exactly!
 const headingElement = document.querySelector("#galleryHeading");
-//finish the DOM definitions for PositionImage, PositionName, PositionDetails, PositionOwner,OwnerPhone, and PositionID
 const imageElement = document.querySelector("#positionImage");
 const nameElement = document.querySelector("#positionName")
 const detailElement = document.querySelector("#positionDetails");
@@ -67,23 +52,18 @@ const idElement = document.querySelector("#positionID");
 const nextButton = document.querySelector("#next");
 const prevButton = document.querySelector("#prev");
 
-// DISPLAY LOGIC & NAVIGATION
 
-//  Write the showPosition function to update DOM elements with current Position data.
 function showPosition(index) {
-  const Position = Positions[index];
+    const Position = Positions[index];
 
-  // 1. Update gallery heading text content (e.g., "Position 1 of 3")
     headingElement.textContent = `Position ${index + 1} of 6`
 
-  // 2. Update Position image src and alt attributes safely if PositionImageElement exists
-  if (imageElement !== null){
-    imageElement.src = Position.image
-    imageElement.alt = Position.name
-  }
+    if (imageElement !== null) {
+        imageElement.src = Position.image
+        imageElement.alt = Position.name
+    }
 
 
-  // 3. Update text content for name, details, owner, phone, and ID elements using prototype methods
     nameElement.textContent = Position.name
     detailElement.textContent = Position.getDescription()
     idElement.textContent = Position.getID()
@@ -91,60 +71,125 @@ function showPosition(index) {
 
 }
 
-// Complete button handlers to update currentIndex and loop at boundaries.
 function handleNextClick() {
-  // Increment index. If index exceeds array length, reset to 0. Then update display.
-  currentIndex += 1;
-  if (currentIndex >= Positions.length){
-    currentIndex = 0;
-  }
-  showPosition(currentIndex)
+    currentIndex += 1;
+    if (currentIndex >= Positions.length) {
+        currentIndex = 0;
+    }
+    showPosition(currentIndex)
 }
 
 function handlePrevClick() {
-  // Decrement index. If index is less than 0, wrap to last item. Then update display.
-  currentIndex -= 1
-  if (currentIndex < 0){
-    currentIndex = Positions.length - 1
-  }
-  showPosition(currentIndex)
+    currentIndex -= 1
+    if (currentIndex < 0) {
+        currentIndex = Positions.length - 1
+    }
+    showPosition(currentIndex)
 
 }
 
-// Event Listeners
 nextButton.addEventListener("click", handleNextClick);
 prevButton.addEventListener("click", handlePrevClick);
 
-// Initial display on page load
 showPosition(currentIndex);
 
 function Rally(name, description, image = "") {
-  this.name = name;
-  this.description = description;
-  this.image = image;
+    this.name = name;
+    this.description = description;
+    this.image = image;
 }
 
 
 Rally.prototype.getDescription = function () {
-  // Return a string formatted like: "Stanley is a cat and is 6 years old."
-  return (`${this.name}: ${this.description}`);
+    return (`${this.description}`);
 };
 
-const rally1 = new Rally("Serve", "The ball is served by team 1 to team 2.", "serving.jpg");
-const rally2 = new Rally("Recieve", "The ball is recieved by team 2", "recieve.jpg");
-const rally3 = new Rally("Set", "The ball is then set to one of team 2's hitters", "setting.jpeg");
-const rally4 = new Rally("Spike", "The hitter then strikes the ball over the net to team 1", "spiking.jpg");
-const rally5 = new Rally("Terminated", "The teams rally until the ball hits the floor or a foul is commited", "finish.jpg");
-let index = 0;
+const rally1 = new Rally("Serve", "The ball is served by one of team 1's players from behind serve line to team 2.", "serve2.jpg");
+const rally2 = new Rally("Recieve", "The ball is recieved by team 2 and passed to the setter.", "recieve.jpg");
+const rally3 = new Rally("Set", "The ball is then redirected by the setter to one of team 2's hitters.", "setting.jpg");
+const rally4 = new Rally("Spike", "The hitter then strikes the ball over the net to team 1.", "spiking.jpg");
+const rally5 = new Rally("How the rally ends", "The teams rally until the ball hits the floor or a foul is commited. Then the process starts all over again.", "finish2.jpg");
+
 
 const Rallys = [rally1, rally2, rally3, rally4, rally5];
 
 
+Rallys.forEach(function (Rally) {
+    console.log(Rally.name)
+});
+
+let index = 0;
+
+const rallyHeadingElement = document.querySelector("#rallyHeading");
+const rallyimageElement = document.querySelector("#rallyImage");
+const rallyNameElement = document.querySelector("#rallyName")
+const rallyDetailElement = document.querySelector("#rallyDetails");
+
 const rallyGallery = document.getElementById('rallyGallery');
 
-rallyGallery.addEventListener("click", function(event){
-    index += 1;
-    if (index >= Rallys.length){
-        index = 0;
-  }
+rallyGallery.addEventListener("click", function (event) {
+    if (event.target.id === "rallynext") {
+        index += 1;
+        if (index >= Rallys.length) {
+            index = 0;
+        }
+        rallyShowPosition(index)
+    }
 })
+
+function rallyShowPosition(index) {
+    const Rally = Rallys[index];
+
+
+    if (rallyimageElement !== null) {
+        rallyimageElement.src = Rally.image;
+        rallyimageElement.alt = Rally.name;
+    }
+    rallyNameElement.textContent = Rally.name;
+    rallyDetailElement.textContent = Rally.getDescription();
+}
+rallyShowPosition(index)
+
+const form = document.querySelector('#profileForm')
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log("This has been prevented");
+    const formName = form.elements.playerName.value;
+    const formPosition = form.elements.favoritePosition.value;
+
+    const output = document.querySelector('#profileResult')
+    output.textContent = `Player name: ${formName}\nFavorite position: ${formPosition}`;
+    sessionStorage .setItem("playerName", formName);
+    console.log(sessionStorage .getItem("playerName"));
+    sessionStorage .setItem("favoritePosition", formPosition);
+    console.log(sessionStorage .getItem("favoritePosition"));
+})
+const savedName = sessionStorage .getItem("playerName");
+const savedPosition = sessionStorage .getItem("favoritePosition");
+const savedProfile = document.querySelector("#savedProfile");
+
+if (savedName && savedPosition) {
+    savedProfile.textContent =
+        `Saved name: ${savedName} | Favorite position: ${savedPosition}`;
+}
+
+const nameField = document.querySelector("#playerName");
+
+nameField.addEventListener("focus", function () {
+    console.log("Name field selected.");
+});
+
+nameField.addEventListener("blur", function () {
+    console.log("Name field left.");
+});
+
+console.log(window.innerHeight);
+console.log(window.innerWidth);
+
+/*
+     - Which JavaScript feature was easiest for you to use? Definitely the focus and blur.
+     - Which JavaScript feature was most challenging? Setting up my rally object.
+     - How did you use events in your project? One example was with the rally code. I used single parent event listener to handle the code. aka delegation.
+     - How did you use storage in your project? I used localStorage to store the users name and favorite position.
+*/
